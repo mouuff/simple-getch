@@ -5,9 +5,10 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 16:29:52 2016 alies_a
-** Last update Mon May  9 16:49:58 2016 alies_a
+** Last update Mon May  9 17:06:07 2016 alies_a
 */
 
+#include <string.h>
 #include <termios.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
@@ -19,6 +20,8 @@ int	ch_read_key()
   char	*comb;
   char	buff;
 
+  if ((comb = strdup("")) == NULL)
+    return (-1);
   read(STDIN_FILENO, &buff, 1);
   return (5);
 }
