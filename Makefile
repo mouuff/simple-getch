@@ -5,7 +5,7 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Mon May  9 15:35:25 2016 alies_a
-## Last update Mon May  9 15:35:48 2016 alies_a
+## Last update Mon May  9 16:15:21 2016 alies_a
 ##
 
 NAME	=	a.out
@@ -16,7 +16,7 @@ RM	=	rm -f
 
 SRC	=	./src/
 
-GETCH	=	./src/getch/
+CH	=	./src/ch/
 
 CFLAGS	=	-I$(INC) \
 		-Wall -Wextra -W -g
@@ -24,6 +24,7 @@ CFLAGS	=	-I$(INC) \
 LDFLAGS	+=
 
 SRCS	=	$(SRC)main.c \
+		$(CH)ch.c \
 
 OBJS	=	$(SRCS:.c=.o)
 
