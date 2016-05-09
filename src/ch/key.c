@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 16:29:52 2016 alies_a
-** Last update Mon May  9 17:45:04 2016 alies_a
+** Last update Mon May  9 17:48:01 2016 alies_a
 */
 
 #include <string.h>
@@ -27,13 +27,13 @@ int	ch_read_key()
   while (strncmp(comb, up, strlen(comb)) == 0)
     {
       if ((r = read(STDIN_FILENO, &buff, 1)) != 1)
-	return (0);
+	return (CH_ESC);
       if (ch_stradd(&comb, buff) == NULL)
 	return (-1);
       if (strcmp(comb, up) == 0)
 	return (1337);
     }
-  return (CH_ESC);
+  return (0);
 }
 
 int			ch_key()
