@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 16:29:52 2016 alies_a
-** Last update Mon May  9 17:48:01 2016 alies_a
+** Last update Tue May 10 12:00:43 2016 alies_a
 */
 
 #include <string.h>
@@ -18,18 +18,16 @@ char up[] = {91, 65, 0};
 
 int	ch_read_key()
 {
-  char	*comb;
+  char	comb[KEY_MAX_SIZE];
   char	buff;
   int	r;
 
-  if ((comb = strdup("")) == NULL)
-    return (-1);
+  comb[0] = '\0';
   while (strncmp(comb, up, strlen(comb)) == 0)
     {
       if ((r = read(STDIN_FILENO, &buff, 1)) != 1)
 	return (CH_ESC);
-      if (ch_stradd(&comb, buff) == NULL)
-	return (-1);
+      ch_stradd(comb, buff, KEY_MAX_SIZE);
       if (strcmp(comb, up) == 0)
 	return (1337);
     }
