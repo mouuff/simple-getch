@@ -5,13 +5,19 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:44:06 2016 alies_a
-** Last update Mon May  9 16:17:37 2016 alies_a
+** Last update Tue May 10 14:31:37 2016 alies_a
 */
 
 #include <termios.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
 #include <stdbool.h>
+
+/*
+#include <curses.h>
+#include <term.h>
+#include <stdlib.h>
+*/
 
 static struct termios old_term;
 static bool set = false;
@@ -20,6 +26,7 @@ int	ch_init()
 {
   struct termios term;
 
+  //tgetent(NULL, getenv("TERM"));
   if (set == true)
     return (1);
   if (ioctl(STDIN_FILENO, TCGETS, &term) == -1)

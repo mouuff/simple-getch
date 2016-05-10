@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Tue May 10 12:02:02 2016 alies_a
+** Last update Tue May 10 14:36:56 2016 alies_a
 */
 
 #include <stdlib.h>
@@ -15,6 +15,7 @@ void	test()
 {
   char test[KEY_MAX_SIZE];
 
+  test[0] = '\0';
   ch_stradd(test, 'a', KEY_MAX_SIZE);
 
   printf("%s\n", test);

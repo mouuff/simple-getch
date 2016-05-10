@@ -5,7 +5,7 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Mon May  9 15:35:25 2016 alies_a
-## Last update Mon May  9 17:10:48 2016 alies_a
+## Last update Tue May 10 14:36:46 2016 alies_a
 ##
 
 NAME	=	a.out
@@ -21,6 +21,8 @@ CH	=	./src/ch/
 CFLAGS	=	-I$(INC) \
 		-Wall -Wextra -W -g
 
+LDFLAGS	+=
+
 SRCS	=	$(SRC)main.c \
 		$(CH)get.c \
 		$(CH)key.c \
@@ -32,7 +34,7 @@ OBJS	=	$(SRCS:.c=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-		$(CC) $(OBJS) -o $(NAME)
+		$(CC) $(OBJS) -o $(NAME) $(LDFLAGS)
 
 clean:
 		$(RM) $(OBJS)
