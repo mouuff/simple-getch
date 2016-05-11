@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 16:29:52 2016 alies_a
-** Last update Tue May 10 12:00:43 2016 alies_a
+** Last update Wed May 11 15:34:35 2016 alies_a
 */
 
 #include <string.h>
@@ -14,27 +14,52 @@
 #include <sys/ioctl.h>
 #include "ch.h"
 
-char up[] = {91, 65, 0};
+//char up[] = {91, 65, 0};
 
-int	ch_read_key()
+static int	key_cmp(t_key const *keys,
+			char const *comb,
+			t_cmp cmp)
 {
-  char	comb[KEY_MAX_SIZE];
-  char	buff;
-  int	r;
+  size_t	x;
 
-  comb[0] = '\0';
-  while (strncmp(comb, up, strlen(comb)) == 0)
+  x = 0;
+  while (keys[x].pat != NULL)
     {
-      if ((r = read(STDIN_FILENO, &buff, 1)) != 1)
-	return (CH_ESC);
-      ch_stradd(comb, buff, KEY_MAX_SIZE);
-      if (strcmp(comb, up) == 0)
-	return (1337);
+      if (cmp == C_EXACT)
+	{
+	  if (strcmp(keys[x].pat, comb) == 0)
+	    return (keys[x].key);
+	}
+      else
+	{
+	  if (strncmp(keys[x].pat, comb, strlen(comb)) == 0)
+	    return (keys[x].key);
+	}
+      x += 1;
     }
   return (0);
 }
 
-int			ch_key()
+static int	read_key(t_key const *keys)
+{
+  char		comb[KEY_MAX_SIZE];
+  char		buff;
+  int		r;
+  int		res;
+
+  comb[0] = '\0';
+  while (key_cmp(keys, comb, C_CONTAINS) != 0)
+    {
+      if ((r = read(STDIN_FILENO, &buff, 1)) != 1)
+	return (CH_ESC);
+      ch_stradd(comb, buff, KEY_MAX_SIZE);
+      if ((res = key_cmp(keys, comb, C_EXACT)) != 0)
+	return (res);
+    }
+  return (0);
+}
+
+int			ch_key(t_key const *keys)
 {
   struct termios	term;
   struct termios	old_term;
@@ -47,7 +72,7 @@ int			ch_key()
   term.c_cc[VTIME] = 10;
   if (ioctl(STDIN_FILENO, TCSETS, &term) == -1)
     return (-1);
-  res = ch_read_key();
+  res = read_key(keys);
   if (ioctl(STDIN_FILENO, TCSETS, &old_term) == -1)
     return (-1);
   return (res);

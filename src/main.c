@@ -5,11 +5,19 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Tue May 10 14:36:56 2016 alies_a
+** Last update Wed May 11 15:37:16 2016 alies_a
 */
 
 #include <stdlib.h>
 #include "ch.h"
+
+t_key keys[] = {
+  {"[A", K_UP},
+  {"[B", K_DOWN},
+  {"[D", K_LEFT},
+  {"[C", K_RIGHT},
+  {NULL, K_UNK},
+};
 
 void	test()
 {
@@ -30,7 +38,7 @@ int	main()
   ch_init();
   while (key != 'a')
     {
-      key = ch_get();
+      key = ch_get(keys);
       if (key != -1)
 	printf("%d\n", key);
     }
