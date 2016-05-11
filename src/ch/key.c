@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 16:29:52 2016 alies_a
-** Last update Wed May 11 15:34:35 2016 alies_a
+** Last update Wed May 11 15:37:52 2016 alies_a
 */
 
 #include <string.h>
@@ -13,8 +13,6 @@
 #include <unistd.h>
 #include <sys/ioctl.h>
 #include "ch.h"
-
-//char up[] = {91, 65, 0};
 
 static int	key_cmp(t_key const *keys,
 			char const *comb,

@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Wed May 11 15:37:16 2016 alies_a
+** Last update Wed May 11 16:20:56 2016 alies_a
 */
 
 #include <stdlib.h>
@@ -18,6 +18,11 @@ t_key keys[] = {
   {"[C", K_RIGHT},
   {NULL, K_UNK},
 };
+
+void	my_putchar(char c)
+{
+  write(1, &c, 1);
+}
 
 void	test()
 {
@@ -40,7 +45,17 @@ int	main()
     {
       key = ch_get(keys);
       if (key != -1)
-	printf("%d\n", key);
+	{
+	  if (key == K_LEFT)
+	    {
+	      my_putchar('\b');
+	      my_putchar(' ');
+	      my_putchar('\b');
+	    }
+	  else
+	    my_putchar(key);
+	  //printf("%d\n", key);
+	}
     }
   ch_end();
   return (EXIT_SUCCESS);
