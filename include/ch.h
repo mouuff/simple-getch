@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 16:33:59 2016 alies_a
-** Last update Wed May 11 15:28:32 2016 alies_a
+** Last update Fri May 13 11:54:57 2016 alies_a
 */
 
 #ifndef CH_H_
@@ -17,14 +17,14 @@
 
 # include <stddef.h>
 
-typedef enum e_bkey
+enum
   {
     K_UNK	= 255,
     K_UP,
     K_DOWN,
     K_LEFT,
     K_RIGHT
-  } t_bkey;
+  };
 
 typedef enum e_cmp
   {

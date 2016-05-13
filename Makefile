@@ -5,7 +5,7 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Mon May  9 15:35:25 2016 alies_a
-## Last update Tue May 10 14:36:46 2016 alies_a
+## Last update Thu May 12 14:34:13 2016 alies_a
 ##
 
 NAME	=	a.out
@@ -21,7 +21,7 @@ CH	=	./src/ch/
 CFLAGS	=	-I$(INC) \
 		-Wall -Wextra -W -g
 
-LDFLAGS	+=
+LDFLAGS	+=	-lncurses
 
 SRCS	=	$(SRC)main.c \
 		$(CH)get.c \
