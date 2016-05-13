@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 16:33:59 2016 alies_a
-** Last update Fri May 13 11:54:57 2016 alies_a
+** Last update Fri May 13 15:16:44 2016 alies_a
 */
 
 #ifndef CH_H_
@@ -39,8 +39,8 @@ typedef struct s_key
 } t_key;
 
 int     ch_init();
-int     ch_end();
 int	ch_get(t_key const *keys);
+int     ch_end();
 
 void	ch_stradd(char *str, char c, size_t max);
 int     ch_key(t_key const *keys);
