@@ -5,10 +5,12 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Mon May  9 15:35:25 2016 alies_a
-## Last update Thu May 12 14:34:13 2016 alies_a
+## Last update Fri May 13 12:57:04 2016 alies_a
 ##
 
 NAME	=	a.out
+
+CC	=	gcc
 
 INC	=	./include/
 
@@ -18,16 +20,19 @@ SRC	=	./src/
 
 CH	=	./src/ch/
 
-CFLAGS	=	-I$(INC) \
-		-Wall -Wextra -W -g
+RD	=	./src/rd/
 
-LDFLAGS	+=	-lncurses
+CFLAGS	=	-I$(INC) \
+		-Wall -Wextra -W
+
+LDFLAGS	+=
 
 SRCS	=	$(SRC)main.c \
 		$(CH)get.c \
 		$(CH)key.c \
 		$(CH)ch.c \
 		$(CH)stradd.c \
+		$(RD)line.c \
 
 OBJS	=	$(SRCS:.c=.o)
 
