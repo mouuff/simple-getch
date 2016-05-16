@@ -5,7 +5,7 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Mon May  9 15:35:25 2016 alies_a
-## Last update Mon May 16 15:41:51 2016 alies_a
+## Last update Mon May 16 15:58:33 2016 alies_a
 ##
 
 NAME	=	a.out
@@ -36,6 +36,10 @@ SRCS	=	$(SRC)main.c \
 		$(RD)char.c \
 		$(RD)key.c \
 		$(RD)left.c \
+		$(RD)right.c \
+		$(RD)up.c \
+		$(RD)back.c \
+		$(RD)down.c \
 		$(RD)put.c \
 		$(RD)add_char.c \
 		$(RD)disp.c \
