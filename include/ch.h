@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 16:33:59 2016 alies_a
-** Last update Mon May 16 14:02:59 2016 alies_a
+** Last update Mon May 16 16:48:37 2016 alies_a
 */
 
 #ifndef CH_H_
@@ -20,6 +20,7 @@
 enum
   {
     K_ERR	= -1,
+    K_BACK	= 127,
     K_UNK	= 255,
     K_UP,
     K_DOWN,

@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May 16 13:21:15 2016 alies_a
-** Last update Mon May 16 16:02:58 2016 alies_a
+** Last update Mon May 16 16:48:53 2016 alies_a
 */
 
 #include "rd.h"
@@ -15,6 +15,7 @@ static t_act g_actions[] = {
   {rd_right, K_RIGHT},
   {rd_up, K_UP},
   {rd_down, K_DOWN},
+  {rd_back, K_BACK},
   {NULL, K_UNK}
 };
 
