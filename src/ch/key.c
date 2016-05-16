@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 16:29:52 2016 alies_a
-** Last update Wed May 11 15:37:52 2016 alies_a
+** Last update Mon May 16 14:10:50 2016 alies_a
 */
 
 #include <string.h>
@@ -64,14 +64,14 @@ int			ch_key(t_key const *keys)
   int			res;
 
   if (ioctl(STDIN_FILENO, TCGETS, &term) == -1)
-    return (-1);
+    return (K_ERR);
   old_term = term;
   term.c_cc[VMIN] = 0;
   term.c_cc[VTIME] = 10;
   if (ioctl(STDIN_FILENO, TCSETS, &term) == -1)
-    return (-1);
+    return (K_ERR);
   res = read_key(keys);
   if (ioctl(STDIN_FILENO, TCSETS, &old_term) == -1)
-    return (-1);
+    return (K_ERR);
   return (res);
 }
