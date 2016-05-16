@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May 16 15:31:04 2016 alies_a
-** Last update Mon May 16 16:35:55 2016 alies_a
+** Last update Mon May 16 17:28:45 2016 alies_a
 */
 
 #include <string.h>
@@ -25,9 +25,10 @@ void	rd_clear(t_rd *rd)
     }
 }
 
-void	rd_disp(t_rd const *rd)
+void		rd_disp(t_rd const *rd)
 {
-  int	pos;
+  static int	old_size;
+  int		pos;
 
   pos = rd->curs;
   while (pos++ < (int)strlen(rd->line))
@@ -41,4 +42,5 @@ void	rd_disp(t_rd const *rd)
       rd_put(rd, '\b');
       pos -= 1;
     }
+  //old_size = 
 }
