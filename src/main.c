@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Mon May 16 14:20:54 2016 alies_a
+** Last update Mon May 16 15:46:46 2016 alies_a
 */
 
 #include <stdlib.h>
@@ -28,6 +28,7 @@ int	main()
 {
   char	*line;
 
+  write(1, "prompt $>", 9);
   line = rd_line(1, keys);
   /*  
   int	key;

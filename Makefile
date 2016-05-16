@@ -5,7 +5,7 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Mon May  9 15:35:25 2016 alies_a
-## Last update Mon May 16 13:34:56 2016 alies_a
+## Last update Mon May 16 15:41:51 2016 alies_a
 ##
 
 NAME	=	a.out
@@ -37,6 +37,8 @@ SRCS	=	$(SRC)main.c \
 		$(RD)key.c \
 		$(RD)left.c \
 		$(RD)put.c \
+		$(RD)add_char.c \
+		$(RD)disp.c \
 
 OBJS	=	$(SRCS:.c=.o)
 

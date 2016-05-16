@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 12:53:36 2016 alies_a
-** Last update Mon May 16 13:40:06 2016 alies_a
+** Last update Mon May 16 15:26:27 2016 alies_a
 */
 
 #include <stdlib.h>
@@ -17,7 +17,6 @@ static int	rd_init(int fd, t_rd *rd)
     return (1);
   (rd->line)[0] = '\0';
   rd->curs = 0;
-  rd->line_size = 0;
   rd->fd = fd;
   return (0);
 }

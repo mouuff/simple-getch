@@ -5,14 +5,25 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 16:06:52 2016 alies_a
-** Last update Mon May 16 13:36:51 2016 alies_a
+** Last update Mon May 16 15:37:11 2016 alies_a
 */
 
 #include <unistd.h>
 #include "rd.h"
 
-void	rd_put(t_rd *rd, char c)
+void	rd_put(t_rd const *rd, char c)
 {
   write(rd->fd, &c, 1);
-  rd->curs += 1;
+}
+
+void	rd_putstr(t_rd const *rd, char const *str)
+{
+  int	x;
+
+  x = 0;
+  while (str[x] != '\0')
+    {
+      rd_put(rd, str[x]);
+      x += 1;
+    }
 }

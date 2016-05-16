@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 11:51:08 2016 alies_a
-** Last update Mon May 16 13:36:36 2016 alies_a
+** Last update Mon May 16 15:44:21 2016 alies_a
 */
 
 #ifndef RD_H_
@@ -17,7 +17,6 @@ typedef struct s_rd
 {
   int	fd;
   int	curs;
-  int	line_size;
   char	*line;
 } t_rd;
 
@@ -31,8 +30,11 @@ typedef struct s_act
 
 char	*rd_line(int fd, t_key const *keys);
 
+void    rd_disp(t_rd const *rd);
+int	rd_add_char(t_rd *rd, char c);
 int	rd_key(t_rd *rd, int key);
-void	rd_put(t_rd *rd, char c);
+void	rd_put(t_rd const *rd, char c);
+void	rd_putstr(t_rd const *rd, char const *str);
 
 int	rd_char(t_rd *rd, int key);
 int     rd_left(t_rd *rd, int key);
