@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 16:29:52 2016 alies_a
-** Last update Mon May 16 14:10:50 2016 alies_a
+** Last update Mon May 16 14:25:36 2016 alies_a
 */
 
 #include <string.h>
@@ -54,7 +54,7 @@ static int	read_key(t_key const *keys)
       if ((res = key_cmp(keys, comb, C_EXACT)) != 0)
 	return (res);
     }
-  return (0);
+  return (K_UNK);
 }
 
 int			ch_key(t_key const *keys)

@@ -5,11 +5,11 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Mon May 16 13:57:18 2016 alies_a
+** Last update Mon May 16 14:20:54 2016 alies_a
 */
 
 #include <stdlib.h>
-#include "ch.h"
+#include "rd.h"
 
 t_key keys[] = {
   {"[A", K_UP},
@@ -26,12 +26,10 @@ void	my_putchar(char c)
 
 int	main()
 {
-  /*
   char	*line;
 
   line = rd_line(1, keys);
-  */
-  
+  /*  
   int	key;
 
   key = -1;
@@ -52,6 +50,6 @@ int	main()
         }
     }
   ch_end();
-  
+  */
   return (EXIT_SUCCESS);
 }
