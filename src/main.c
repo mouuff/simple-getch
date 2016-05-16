@@ -5,8 +5,10 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Mon May 16 15:46:46 2016 alies_a
+** Last update Mon May 16 16:50:14 2016 alies_a
 */
+
+#include <unistd.h>
 
 #include <stdlib.h>
 #include "rd.h"
