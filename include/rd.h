@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 11:51:08 2016 alies_a
-** Last update Tue May 17 13:50:03 2016 alies_a
+** Last update Tue May 17 14:14:59 2016 alies_a
 */
 
 #ifndef RD_H_
@@ -13,11 +13,19 @@
 
 # include "ch.h"
 
+typedef struct s_line
+{
+  char *line;
+  struct s_line *next;
+  struct s_line *prev;
+} t_line;
+
 typedef struct s_rd
 {
-  int	fd;
-  int	curs;
-  char	*line;
+  int fd;
+  int curs;
+  char *line;
+  t_line *history;
 } t_rd;
 
 typedef int(*t_action)(t_rd *rd, int key);
