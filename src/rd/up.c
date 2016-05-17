@@ -5,18 +5,21 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May 16 15:55:45 2016 alies_a
-** Last update Tue May 17 13:50:30 2016 alies_a
+** Last update Tue May 17 18:18:23 2016 alies_a
 */
 
+#include <string.h>
 #include "rd.h"
 
 int     rd_up(t_rd *rd, int key)
 {
-  (void)rd;
   (void)key;
   rd_clear(rd, -1);
-  //rd->curs = 0;
-  //rd->line = strdup("truc");
-  //rd_disp(rd);
+
+  rd->line = rd->history->lines[rd->history->pos];
+  rd->history->pos += 1;
+  
+  rd_putstr(rd, rd->line);
+  rd->curs = strlen(rd->line);
   return (0);
 }

@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Tue May 17 13:58:14 2016 alies_a
+** Last update Tue May 17 17:50:48 2016 alies_a
 */
 
 #include <unistd.h>
@@ -30,9 +30,12 @@ int	main()
 {
   char	*line;
 
-  write(1, "prompt $>", 9);
-  line = rd_line(1, keys);
-  printf("%s\n", line);
+  while (42)
+    {
+      write(1, "prompt $>", 9);
+      line = rd_line(1, keys);
+      printf("%s\n", line);
+    }
   /*  
   int	key;
 
