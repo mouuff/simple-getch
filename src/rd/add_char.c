@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May 16 15:22:20 2016 alies_a
-** Last update Mon May 16 15:27:38 2016 alies_a
+** Last update Tue May 17 13:44:56 2016 alies_a
 */
 
 #include <stdlib.h>
@@ -32,6 +32,5 @@ int	rd_add_char(t_rd *rd, char c)
 {
   if (char_add_at(&(rd->line), rd->curs, c))
     return (1);
-  rd->curs += 1;
   return (0);
 }
