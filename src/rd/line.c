@@ -5,30 +5,12 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 12:53:36 2016 alies_a
-** Last update Wed May 18 14:13:56 2016 alies_a
+** Last update Wed May 18 14:38:41 2016 alies_a
 */
 
 #include <string.h>
 #include <stdlib.h>
 #include "rd.h"
-
-static void		rd_history_init(t_rd *rd)
-{
-  static t_history	history;
-  static int		first = 1;
-
-  if (first)
-    {
-      memset(&history, 0, sizeof(t_history));
-      first = 0;
-    }
-  else
-    {
-      if (history.pos + 1 < HISTORY_SIZE)
-	history.pos += 1;
-    }
-  rd->history = &history;
-}
 
 static int	rd_init(int fd, t_rd *rd)
 {

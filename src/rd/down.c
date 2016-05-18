@@ -5,9 +5,10 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May 16 15:58:49 2016 alies_a
-** Last update Wed May 18 14:28:18 2016 alies_a
+** Last update Wed May 18 14:38:31 2016 alies_a
 */
 
+#include <string.h>
 #include "rd.h"
 
 int     rd_down(t_rd *rd, int key)

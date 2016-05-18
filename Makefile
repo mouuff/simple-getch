@@ -5,12 +5,12 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Mon May  9 15:35:25 2016 alies_a
-## Last update Wed May 18 11:47:56 2016 alies_a
+## Last update Wed May 18 15:29:03 2016 alies_a
 ##
 
 NAME	=	a.out
 
-CC	=	gcc
+CC	=	gcc -g
 
 INC	=	./include/
 
@@ -43,6 +43,7 @@ SRCS	=	$(SRC)main.c \
 		$(RD)put.c \
 		$(RD)add_char.c \
 		$(RD)rm_char.c \
+		$(RD)history_init.c \
 		$(RD)disp.c \
 
 OBJS	=	$(SRCS:.c=.o)

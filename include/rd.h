@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 11:51:08 2016 alies_a
-** Last update Wed May 18 13:47:11 2016 alies_a
+** Last update Wed May 18 14:37:35 2016 alies_a
 */
 
 #ifndef RD_H_
@@ -49,6 +49,7 @@ void    rd_clear(t_rd *rd, int size);
 int	rd_add_char(t_rd *rd, char c);
 void    rd_rm_char(char *str, int pos);
 int	rd_key(t_rd *rd, int key);
+void	rd_history_init(t_rd *rd);
 
 void	rd_put(t_rd const *rd, char c);
 void	rd_putstr(t_rd const *rd, char const *str);
