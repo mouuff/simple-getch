@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 12:53:36 2016 alies_a
-** Last update Wed May 18 13:51:15 2016 alies_a
+** Last update Wed May 18 13:58:45 2016 alies_a
 */
 
 #include <string.h>
@@ -24,7 +24,7 @@ static void		rd_history_init(t_rd *rd)
     }
   else
     {
-      if (history.pos < HISTORY_SIZE)
+      if (history.pos + 1 < HISTORY_SIZE)
 	history.pos += 1;
     }
   rd->history = &history;
