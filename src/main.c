@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Tue May 17 17:50:48 2016 alies_a
+** Last update Wed May 18 17:14:23 2016 alies_a
 */
 
 #include <unistd.h>
@@ -26,9 +26,9 @@ void	my_putchar(char c)
   write(1, &c, 1);
 }
 
-int	main()
+int		main()
 {
-  char	*line;
+  const char	*line;
 
   while (42)
     {

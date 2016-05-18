@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 12:53:36 2016 alies_a
-** Last update Wed May 18 14:38:41 2016 alies_a
+** Last update Wed May 18 17:11:27 2016 alies_a
 */
 
 #include <string.h>
@@ -31,7 +31,7 @@ static void	rd_ret(t_rd *rd)
   rd_put(rd, '\n');
 }
 
-char		*rd_line(int fd, t_key const *keys)
+const char	*rd_line(int fd, t_key const *keys)
 {
   t_rd		rd;
   int		key;

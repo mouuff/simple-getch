@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 11:51:08 2016 alies_a
-** Last update Wed May 18 14:37:35 2016 alies_a
+** Last update Wed May 18 17:11:38 2016 alies_a
 */
 
 #ifndef RD_H_
@@ -42,7 +42,7 @@ typedef struct s_act
 ** rd_clear will change curs pos, but not line*
 */
 
-char	*rd_line(int fd, t_key const *keys);
+const char *rd_line(int fd, t_key const *keys);
 
 void    rd_disp(t_rd *rd);
 void    rd_clear(t_rd *rd, int size);
