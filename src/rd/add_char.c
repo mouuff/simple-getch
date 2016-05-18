@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May 16 15:22:20 2016 alies_a
-** Last update Tue May 17 13:44:56 2016 alies_a
+** Last update Wed May 18 13:52:37 2016 alies_a
 */
 
 #include <stdlib.h>
@@ -30,7 +30,7 @@ static int	char_add_at(char **str, int x, char c)
 
 int	rd_add_char(t_rd *rd, char c)
 {
-  if (char_add_at(&(rd->line), rd->curs, c))
+  if (char_add_at(&(RD_LINE), rd->curs, c))
     return (1);
   return (0);
 }

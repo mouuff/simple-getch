@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May 16 15:57:53 2016 alies_a
-** Last update Mon May 16 16:49:43 2016 alies_a
+** Last update Wed May 18 13:51:39 2016 alies_a
 */
 
 #include <string.h>
@@ -14,9 +14,9 @@
 int     rd_right(t_rd *rd, int key)
 {
   (void)key;
-  if (rd->curs < (int)strlen(rd->line))
+  if (rd->curs < (int)strlen(RD_LINE))
     {
-      rd_put(rd, (rd->line)[rd->curs]);
+      rd_put(rd, (RD_LINE)[rd->curs]);
       rd->curs += 1;
     }
   return (0);

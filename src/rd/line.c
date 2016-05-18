@@ -5,18 +5,37 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 12:53:36 2016 alies_a
-** Last update Wed May 18 12:47:17 2016 alies_a
+** Last update Wed May 18 13:51:15 2016 alies_a
 */
 
 #include <string.h>
 #include <stdlib.h>
 #include "rd.h"
 
+static void		rd_history_init(t_rd *rd)
+{
+  static t_history	history;
+  static int		first = 1;
+
+  if (first)
+    {
+      memset(&history, 0, sizeof(t_history));
+      first = 0;
+    }
+  else
+    {
+      if (history.pos < HISTORY_SIZE)
+	history.pos += 1;
+    }
+  rd->history = &history;
+}
+
 static int	rd_init(int fd, t_rd *rd)
 {
-  if ((rd->line = malloc(sizeof(char))) == NULL)
+  rd_history_init(rd);
+  if ((RD_LINE = malloc(sizeof(char))) == NULL)
     return (1);
-  (rd->line)[0] = '\0';
+  (RD_LINE)[0] = '\0';
   rd->curs = 0;
   rd->fd = fd;
   return (0);
@@ -24,7 +43,7 @@ static int	rd_init(int fd, t_rd *rd)
 
 static void	rd_ret(t_rd *rd)
 {
-  while (rd->curs < (int)strlen(rd->line))
+  while (rd->curs < (int)strlen(RD_LINE))
     rd_right(rd, K_RIGHT);
   rd_put(rd, '\n');
 }
@@ -47,5 +66,5 @@ char		*rd_line(int fd, t_key const *keys)
     }
   rd_ret(&rd);
   ch_end();
-  return (rd.line);
+  return ((rd.history->lines)[rd.history->pos]);
 }
