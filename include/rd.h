@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 11:51:08 2016 alies_a
-** Last update Tue May 17 17:32:15 2016 alies_a
+** Last update Wed May 18 11:47:17 2016 alies_a
 */
 
 #ifndef RD_H_
@@ -13,20 +13,11 @@
 
 # include "ch.h"
 
-# define HISTORY_SIZE (10)
-
-typedef struct s_history
-{
-  char	*lines[HISTORY_SIZE];
-  int	pos;
-} t_history;
-
 typedef struct s_rd
 {
   int fd;
   int curs;
   char *line;
-  t_history *history;
 } t_rd;
 
 typedef int(*t_action)(t_rd *rd, int key);
@@ -49,8 +40,6 @@ void    rd_clear(t_rd *rd, int size);
 int	rd_add_char(t_rd *rd, char c);
 void    rd_rm_char(char *str, int pos);
 int	rd_key(t_rd *rd, int key);
-
-void    rd_history_add(char *line, t_history *history);
 
 void	rd_put(t_rd const *rd, char c);
 void	rd_putstr(t_rd const *rd, char const *str);
