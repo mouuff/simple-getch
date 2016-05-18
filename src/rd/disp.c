@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May 16 15:31:04 2016 alies_a
-** Last update Tue May 17 13:50:49 2016 alies_a
+** Last update Wed May 18 13:21:25 2016 alies_a
 */
 
 #include <string.h>
@@ -14,7 +14,7 @@
 void	rd_clear(t_rd *rd, int size)
 {
   if (size == -1)
-    size = (int)strlen(rd->line);
+    size = (int)strlen(rd->line) + 1;
   while (rd->curs < size)
     {
       rd_put(rd, ' ');
@@ -29,14 +29,12 @@ void	rd_clear(t_rd *rd, int size)
 
 void		rd_disp(t_rd *rd)
 {
-  static int	old_size = 0;
   int		curs;
 
   curs = rd->curs;
-  rd_clear(rd, old_size);
+  rd_clear(rd, -1);
   rd_putstr(rd, rd->line);
   rd->curs = strlen(rd->line);
   while (rd->curs > curs)
     rd_left(rd, K_LEFT);
-  old_size = (int)strlen(rd->line);
 }
