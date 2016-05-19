@@ -5,7 +5,7 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Mon May  9 15:35:25 2016 alies_a
-## Last update Wed May 18 15:29:03 2016 alies_a
+## Last update Thu May 19 12:44:38 2016 alies_a
 ##
 
 NAME	=	a.out
@@ -21,6 +21,8 @@ SRC	=	./src/
 CH	=	./src/ch/
 
 RD	=	./src/rd/
+
+HISTORY	=	./src/history/
 
 CFLAGS	=	-I$(INC) \
 		-Wall -Wextra -W
@@ -43,8 +45,8 @@ SRCS	=	$(SRC)main.c \
 		$(RD)put.c \
 		$(RD)add_char.c \
 		$(RD)rm_char.c \
-		$(RD)history_init.c \
 		$(RD)disp.c \
+		$(HISTORY)history.c \
 
 OBJS	=	$(SRCS:.c=.o)
 

@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 12:53:36 2016 alies_a
-** Last update Wed May 18 17:11:27 2016 alies_a
+** Last update Thu May 19 12:46:12 2016 alies_a
 */
 
 #include <string.h>
@@ -14,7 +14,7 @@
 
 static int	rd_init(int fd, t_rd *rd)
 {
-  rd_history_init(rd);
+  history_init(rd);
   free(RD_LINE);
   if ((RD_LINE = malloc(sizeof(char))) == NULL)
     return (1);

@@ -1,11 +1,11 @@
 /*
-** history_init.c for init in /home/alies_a/perso/simple-getch
+** history.c for history in /home/alies_a/perso/simple-getch
 ** 
 ** Made by alies_a
 ** Login   <alies_a@epitech.net>
 ** 
-** Started on  Wed May 18 14:36:44 2016 alies_a
-** Last update Thu May 19 12:36:44 2016 alies_a
+** Started on  Thu May 19 12:42:53 2016 alies_a
+** Last update Thu May 19 12:45:16 2016 alies_a
 */
 
 #include <stdlib.h>
@@ -15,9 +15,9 @@
 static t_history      history;
 static int            first = 1;
 
-static void	rd_history_move(t_history *history)
+static void     history_move(t_history *history)
 {
-  int		x;
+  int           x;
 
   x = 0;
   free((history->lines)[x]);
@@ -29,7 +29,7 @@ static void	rd_history_move(t_history *history)
   (history->lines)[HISTORY_SIZE - 1] = NULL;
 }
 
-void	rd_history_free()
+void    history_free()
 {
   int	x;
 
@@ -37,14 +37,14 @@ void	rd_history_free()
   x = 0;
   if (first)
     return ;
-  while (x < HISTORY_SIZE)
+  while(x < HISTORY_SIZE)
     {
       free((history.lines)[x]);
       (history.lines)[x] = 0;
     }
 }
 
-void	rd_history_init(t_rd *rd)
+void    history_init(t_rd *rd)
 {
   if (first)
     {
@@ -56,7 +56,7 @@ void	rd_history_init(t_rd *rd)
       if (history.pos + 1 < HISTORY_SIZE)
 	history.pos += 1;
       else
-	rd_history_move(&history);
+	history_move(&history);
     }
   rd->history = &history;
 }
