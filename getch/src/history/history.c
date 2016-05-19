@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Thu May 19 12:42:53 2016 alies_a
-** Last update Thu May 19 12:45:16 2016 alies_a
+** Last update Thu May 19 15:33:55 2016 alies_a
 */
 
 #include <stdlib.h>
@@ -37,10 +37,11 @@ void    history_free()
   x = 0;
   if (first)
     return ;
-  while(x < HISTORY_SIZE)
+  while (x < HISTORY_SIZE)
     {
       free((history.lines)[x]);
       (history.lines)[x] = 0;
+      x += 1;
     }
 }
 

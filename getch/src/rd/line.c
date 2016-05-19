@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 12:53:36 2016 alies_a
-** Last update Thu May 19 12:46:12 2016 alies_a
+** Last update Thu May 19 15:34:44 2016 alies_a
 */
 
 #include <string.h>
@@ -49,5 +49,7 @@ const char	*rd_line(int fd, t_key const *keys)
     }
   rd_ret(&rd);
   ch_end();
+  if (key == K_CD)
+    return (NULL);
   return ((rd.history->lines)[rd.history->pos]);
 }

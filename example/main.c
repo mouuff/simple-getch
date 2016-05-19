@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Thu May 19 14:38:36 2016 alies_a
+** Last update Thu May 19 15:35:22 2016 alies_a
 */
 
 #include <stdlib.h>
@@ -29,6 +29,8 @@ int		main()
     {
       write(1, "$>", 2);
       line = rd_line(1, keys);
+      if (line == NULL)
+	return (EXIT_SUCCESS);
       printf("%s\n", line);
     }
   return (EXIT_SUCCESS);
