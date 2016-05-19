@@ -5,12 +5,12 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Wed May 18 17:14:23 2016 alies_a
+** Last update Thu May 19 14:38:36 2016 alies_a
 */
 
-#include <unistd.h>
-
 #include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 #include "rd.h"
 
 t_key keys[] = {
@@ -21,42 +21,15 @@ t_key keys[] = {
   {NULL, K_UNK},
 };
 
-void	my_putchar(char c)
-{
-  write(1, &c, 1);
-}
-
 int		main()
 {
   const char	*line;
 
   while (42)
     {
-      write(1, "prompt $>", 9);
+      write(1, "$>", 2);
       line = rd_line(1, keys);
       printf("%s\n", line);
     }
-  /*  
-  int	key;
-
-  key = -1;
-  ch_init();
-  while (key != 'a')
-    {
-      key = ch_get(keys);
-      if (key != -1)
-	{
-	  if (key == K_LEFT)
-	    {
-	      my_putchar('\b');
-	      my_putchar(' ');
-	      my_putchar('\b');
-	    }
-	  else
-	    my_putchar(key);
-        }
-    }
-  ch_end();
-  */
   return (EXIT_SUCCESS);
 }
