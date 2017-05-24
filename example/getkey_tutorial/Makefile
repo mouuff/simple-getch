@@ -5,16 +5,16 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Mon May  9 15:35:25 2016 alies_a
-## Last update Thu May 19 14:43:53 2016 alies_a
+## Last update Wed May 24 18:47:16 2017 arnaud.alies
 ##
 
 NAME	=	a.out
 
 CC	=	gcc
 
-CHINC	=	../getch/include/
+CHINC	=	../../getch/include/
 
-CH	=	../getch/
+CH	=	../../getch/
 
 RM	=	rm -f
 
