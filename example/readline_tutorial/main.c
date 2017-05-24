@@ -5,13 +5,13 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Thu May 19 15:35:22 2016 alies_a
+** Last update Wed May 24 19:08:52 2017 arnaud.alies
 */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
-#include "rd.h"
+#include "getch.h"
 
 t_key keys[] = {
   {"[A", K_UP},

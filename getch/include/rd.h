@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri May 13 11:51:08 2016 alies_a
-** Last update Thu May 19 14:53:47 2016 alies_a
+** Last update Wed May 24 18:56:10 2017 arnaud.alies
 */
 
 #ifndef RD_H_
@@ -41,9 +41,6 @@ typedef struct s_act
 ** Notes:
 ** rd_clear will change curs pos, but not line*
 */
-
-const char	*rd_line(int fd, t_key const *keys);
-void		rd_free();
 
 void    history_init(t_rd *rd);
 void    history_down(t_history *history);

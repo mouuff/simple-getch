@@ -5,13 +5,13 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Mon May  9 15:34:12 2016 alies_a
-** Last update Wed May 24 18:49:50 2017 arnaud.alies
+** Last update Wed May 24 19:08:36 2017 arnaud.alies
 */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
-#include "ch.h"
+#include "getch.h"
 
 t_key keys[] = {
   {"[A", K_UP},
@@ -23,7 +23,6 @@ t_key keys[] = {
 
 int		main()
 {
-  const char	*line;
   int		key;
 
   ch_init();
