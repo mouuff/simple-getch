@@ -5,7 +5,7 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Mon May  9 15:35:25 2016 alies_a
-## Last update Thu May 19 14:54:03 2016 alies_a
+## Last update Sun May 28 11:59:25 2017 arnaud.alies
 ##
 
 NAME	=	libgetch.a
@@ -43,6 +43,7 @@ SRCS	=	$(CH)get.c \
 		$(RD)add_char.c \
 		$(RD)rm_char.c \
 		$(RD)disp.c \
+		$(RD)clear.c \
 		$(RD)free.c \
 		$(HISTORY)history.c \
 		$(HISTORY)down.c \

@@ -1,5 +1,5 @@
 # simple-getch
-Without using termcap or ncurses!
+Get keys and lines without using termcap or ncurses!
 ncurses getch requires a window
 
 Features:
