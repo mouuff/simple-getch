@@ -13,4 +13,4 @@ Getting line with:
 Usable functions are now in getch.h
 
 TODO:
-rewrite history functions (for now the behavior is not have most people would expect)
+rewrite history functions (for now the behavior is not what most people would expect)
