@@ -5,7 +5,7 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Mon May  9 15:35:25 2016 alies_a
-## Last update Sun May 28 11:59:25 2017 arnaud.alies
+## Last update Thu Oct  5 19:05:55 2017 Morgan SIMON
 ##
 
 NAME	=	libgetch.a
@@ -25,7 +25,7 @@ RD	=	./src/rd/
 HISTORY	=	./src/history/
 
 CFLAGS	=	-I$(INC) \
-		-Wall -Wextra -W
+		-Wall -Wextra
 
 SRCS	=	$(CH)get.c \
 		$(CH)key.c \
