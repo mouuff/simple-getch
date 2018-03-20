@@ -30,6 +30,8 @@ static int	char_add_at(char **str, int x, char c)
 
 int	rd_add_char(t_rd *rd, char c)
 {
+  if (rd->history->pos != rd->history->cur_pos)
+    history_cpy_line(rd);
   if (char_add_at(&(RD_LINE), rd->curs, c))
     return (1);
   return (0);

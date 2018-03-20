@@ -16,6 +16,8 @@ int     rd_back(t_rd *rd, int key)
   (void)key;
   if (rd->curs > 0)
     {
+      if (rd->history->pos != rd->history->cur_pos)
+        history_cpy_line(rd);
       rd_rm_char(RD_LINE, rd->curs - 1);
       rd_left(rd, K_LEFT);
       rd_disp(rd);

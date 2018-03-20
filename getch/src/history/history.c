@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Thu May 19 12:42:53 2016 alies_a
-** Last update Thu May 19 15:33:55 2016 alies_a
+** Last update Tue Mar 20 17:17:27 2018 Aurelien
 */
 
 #include <stdlib.h>
@@ -34,6 +34,7 @@ void    history_free()
   int	x;
 
   history.pos = 0;
+  history.cur_pos = 0;
   x = 0;
   if (first)
     return ;
@@ -55,9 +56,27 @@ void    history_init(t_rd *rd)
   else
     {
       if (history.pos + 1 < HISTORY_SIZE)
-	history.pos += 1;
+	{
+	  history.pos += 1;
+	  history.cur_pos += 1;
+	}
       else
 	history_move(&history);
     }
   rd->history = &history;
+}
+
+int    history_cpy_line(t_rd *rd)
+{
+  char **str;
+  char *res;
+
+  str = &(rd->history->lines[rd->history->cur_pos]);
+  if ((res = malloc(sizeof(char) * (strlen(RD_LINE) + 2))) == NULL)
+    return (1);
+  strcpy(res, RD_LINE);
+  free(*str);
+  *str = res;
+  rd->history->pos = rd->history->cur_pos;
+  return (0);
 }
